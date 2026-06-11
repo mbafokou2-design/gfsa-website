@@ -1,0 +1,96 @@
+const content = {
+  nav: {
+    home:     { de: "Startseite",       en: "Home" },
+    about:    { de: "Über uns",          en: "About Us" },
+    services: { de: "Dienstleistungen",  en: "Services" },
+    news:     { de: "Aktuelles",         en: "News" },
+    contact:  { de: "Kontakt",           en: "Contact Us" },
+  },
+
+  hero: {
+    eyebrow:   { de: "GFSA-DO. e.V. · Dortmund", en: "GFSA-DO. e.V. · Dortmund" },
+    title:     { de: "Gambians Family Sisters Association", en: "Gambians Family Sisters Association" },
+    subtitle:  { de: "Gemeinsam stärker – für Gleichberechtigung, Integration und Entwicklung.", en: "Stronger together – for equality, integration and development." },
+    cta:       { de: "Mehr erfahren", en: "Learn More" },
+  },
+
+  mission: {
+    tag:    { de: "Unsere Mission", en: "Our Mission" },
+    title:  { de: "Unsere Mission", en: "Our Mission" },
+    c1Title: { de: "Frauen stärken",       en: "Empowering Women" },
+    c1Text:  { de: "Wir fördern die Gleichberechtigung und bieten Empowerment-Angebote für Frauen aus allen Hintergründen.", en: "We promote gender equality and offer empowerment programs for women from all backgrounds." },
+    c2Title: { de: "Integration fördern",  en: "Fostering Integration" },
+    c2Text:  { de: "Durch Bildung, Sprachkurse und kulturellen Austausch unterstützen wir Menschen mit Migrationsgeschichte.", en: "Through education, language courses and cultural exchange, we support people with a migration background." },
+    c3Title: { de: "Internationale Projekte", en: "International Projects" },
+    c3Text:  { de: "Wir setzen uns für benachteiligte Kinder und Jugendliche in Ländern südlich der Sahara ein.", en: "We advocate for disadvantaged children and youth in sub-Saharan Africa, guided by the UN SDGs." },
+  },
+
+  about: {
+    tag:        { de: "Über uns",    en: "About Us" },
+    title:      { de: "Wer sind wir", en: "Who We Are" },
+    intro:      { de: "Der Verein GFSA-DO. e.V. ist ein gemeinnütziger Verein mit Sitz in Dortmund, eingetragen im Vereinsregister seit dem 18.11.2025.", en: "GFSA-DO. e.V. is a non-profit association based in Dortmund, registered in the association register since 18.11.2025." },
+    goalsTitle: { de: "Unsere Ziele", en: "Our Goals" },
+    goals: [
+      { de: "Förderung der Gleichberechtigung von Frauen und Männern", en: "Promoting gender equality between women and men" },
+      { de: "Unterstützung von Jugend- und Altenhilfe", en: "Supporting youth and elderly welfare" },
+      { de: "Stärkung der Entwicklungszusammenarbeit", en: "Strengthening development cooperation" },
+      { de: "Integration und Teilhabe von Menschen mit Migrationsgeschichte", en: "Integration of people with a migration background" },
+      { de: "Förderung von Geschlechtergerechtigkeit und Diversität", en: "Promoting gender justice and diversity" },
+    ],
+    boardTitle: { de: "Vorstand", en: "Board of Directors" },
+    board: [
+      { role: { de: "Vorsitzende",                  en: "Chairwoman" },         name: "Kaddy Sanneh" },
+      { role: { de: "Stellvertretende Vorsitzende",  en: "Deputy Chairwoman" },  name: "Nyima Sanyang" },
+      { role: { de: "Schriftführerin",               en: "Secretary" },          name: "Lala Sillah" },
+      { role: { de: "Schatzmeisterin",               en: "Treasurer" },          name: "Fatou Jadama" },
+    ],
+    imageCaption: { de: "Unser Team", en: "Our Team" },
+  },
+
+  services: {
+    tag:      { de: "Dienstleistungen", en: "Services" },
+    title:    { de: "Unsere Angebote",  en: "What We Offer" },
+    subtitle: { de: "Wir bieten vielfältige Programme und Aktivitäten für unsere Gemeinschaft.", en: "We offer diverse programs and activities for our community." },
+    list: [
+      { title: { de: "Bildung & Workshops",   en: "Education & Workshops" },   text: { de: "Bildungsangebote, Seminare und Workshops zu gesellschaftlichen und interkulturellen Themen.", en: "Educational offerings, seminars and workshops on social and intercultural topics." } },
+      { title: { de: "Sprachförderung",        en: "Language Support" },        text: { de: "Sprachkurse und Sprachförderung zur Unterstützung der Integration im Alltag.", en: "Language courses and support to help with everyday integration." } },
+      { title: { de: "Freizeit & Generationen",en: "Leisure & Generations" },   text: { de: "Generationsübergreifende Freizeit- und Kulturaktivitäten für Jung und Alt.", en: "Cross-generational leisure and cultural activities for young and old." } },
+      { title: { de: "Internationale Projekte",en: "International Projects" },  text: { de: "Projekte in Bildung, Gesundheit und Jugendförderung in Ländern südlich der Sahara.", en: "Projects in education, health and youth development in sub-Saharan Africa." } },
+    ],
+  },
+
+  news: {
+    tag:       { de: "Aktuelles",  en: "News" },
+    title:     { de: "Aktuelles",  en: "Latest News" },
+    subtitle:  { de: "Unsere neuesten Projekte und Veranstaltungen.", en: "Our latest projects and events." },
+    comingSoon:{ de: "Demnächst",  en: "Coming Soon" },
+    list: [
+      { tag: { de: "Veranstaltung", en: "Event" },   title: { de: "Sommer BBQ 2025",    en: "Summer BBQ 2025" },    text: { de: "Ein fröhliches Gemeinschaftsevent für alle Mitglieder und Freunde der GFSA-DO.", en: "A joyful community event for all members and friends of GFSA-DO." } },
+      { tag: { de: "Projekt",       en: "Project" },  title: { de: "Sisters Connect 2026", en: "Sisters Connect 2026" }, text: { de: "Ein Netzwerktreffen für Frauen – Raum für Austausch, Inspiration und gegenseitige Unterstützung.", en: "A networking gathering for women – a space for exchange, inspiration and mutual support." } },
+    ],
+  },
+
+  contact: {
+    tag:          { de: "Kontakt",           en: "Contact" },
+    title:        { de: "Kontaktieren Sie uns", en: "Get In Touch" },
+    subtitle:     { de: "Wir freuen uns, von Ihnen zu hören.", en: "We look forward to hearing from you." },
+    addressTitle: { de: "Adresse",   en: "Address" },
+    phoneTitle:   { de: "Telefon",   en: "Phone" },
+    webTitle:     { de: "Webseite",  en: "Website" },
+    formTitle:    { de: "Schreiben Sie uns", en: "Send Us a Message" },
+    nameLabel:    { de: "Name",      en: "Name" },
+    emailLabel:   { de: "E-Mail",    en: "Email" },
+    msgLabel:     { de: "Nachricht", en: "Message" },
+    namePH:       { de: "Ihr Name",          en: "Your Name" },
+    emailPH:      { de: "Ihre E-Mail",        en: "Your Email" },
+    msgPH:        { de: "Ihre Nachricht...",  en: "Your message..." },
+    sendBtn:      { de: "Senden",    en: "Send Message" },
+  },
+
+  footer: {
+    copy:     { de: "© 2025 GFSA-DO. e.V. Alle Rechte vorbehalten.", en: "© 2025 GFSA-DO. e.V. All rights reserved." },
+    register: { de: "Eingetragen im Vereinsregister seit 18.11.2025", en: "Registered in the association register since 18.11.2025" },
+  },
+};
+
+export default content;

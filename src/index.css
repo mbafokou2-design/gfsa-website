@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --gold:      #C49A3C;
+  --gold-lt:   #E8C870;
+  --navy:      #1B3557;
+  --navy-lt:   #2C4F80;
+  --cream:     #FBF7F0;
+  --warm:      #F5EFE4;
+  --white:     #FFFFFF;
+  --text:      #2D2D2D;
+  --muted:     #7A7A7A;
+  --radius:    12px;
+  --shadow:    0 4px 24px rgba(27,53,87,0.10);
+  --container: 1100px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 18px; }
+}
