@@ -1,7 +1,7 @@
 .footer {
-  background: var(--navy);
-  color: rgba(255,255,255,0.7);
-  padding: 40px 20px;
+  background: var(--white);
+  border-top: 3px solid var(--gold);
+  padding: 40px 20px 20px;
 }
 
 .footer-inner {
@@ -16,20 +16,22 @@
 
 .footer-brand-name {
   font-family: 'Playfair Display', serif;
-  color: var(--white);
-  font-size: 18px;
-  margin-bottom: 8px;
+  color: var(--green);
+  font-size: 20px;
+  margin-bottom: 4px;
 }
 
 .footer-brand-sub {
-  font-size: 13px;
-  color: var(--gold-lt);
+  font-size: 12px;
+  color: var(--red);
+  font-weight: 700;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .footer-brand-desc {
   font-size: 14px;
-  color: rgba(255,255,255,0.55);
+  color: var(--muted);
   margin-top: 12px;
   line-height: 1.7;
 }
@@ -39,7 +41,7 @@
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--green);
   margin-bottom: 16px;
 }
 
@@ -51,7 +53,7 @@
 }
 
 .footer-links li a {
-  color: rgba(255,255,255,0.6);
+  color: var(--muted);
   text-decoration: none;
   font-size: 14px;
   display: flex;
@@ -60,35 +62,27 @@
   transition: color 0.2s;
 }
 
-.footer-links li a:hover {
-  color: var(--gold-lt);
-}
+.footer-links li a:hover { color: var(--green); }
 
 .footer-contact-item {
   display: flex;
   align-items: flex-start;
   gap: 10px;
   font-size: 14px;
-  color: rgba(255,255,255,0.6);
+  color: var(--muted);
   margin-bottom: 12px;
   line-height: 1.6;
 }
 
 .footer-contact-item a {
-  color: rgba(255,255,255,0.6);
+  color: var(--muted);
   text-decoration: none;
   transition: color 0.2s;
 }
 
-.footer-contact-item a:hover {
-  color: var(--gold-lt);
-}
+.footer-contact-item a:hover { color: var(--green); }
 
-.footer-contact-icon {
-  color: var(--gold);
-  flex-shrink: 0;
-  margin-top: 3px;
-}
+.footer-contact-icon { color: var(--gold); flex-shrink: 0; margin-top: 3px; }
 
 .footer-bottom {
   max-width: var(--container);
@@ -97,12 +91,10 @@
   align-items: center;
   justify-content: space-between;
   font-size: 13px;
-  color: rgba(255,255,255,0.4);
+  color: var(--muted);
   flex-wrap: wrap;
   gap: 10px;
 }
-
-.footer-bottom span { color: rgba(255,255,255,0.4); }
 
 @media (max-width: 768px) {
   .footer-inner { grid-template-columns: 1fr; gap: 28px; }

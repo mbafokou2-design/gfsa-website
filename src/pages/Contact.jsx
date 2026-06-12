@@ -9,7 +9,7 @@ export default function Contact() {
   const c = content.contact;
 
   return (
-    <section id="contact" className="contact">
+    <section className="contact">
       <div className="container">
         <span className="section-tag">{t(c.tag)}</span>
         <h2 className="section-title">{t(c.title)}</h2>
@@ -52,9 +52,7 @@ export default function Contact() {
                 {t(c.webTitle)}
               </div>
               <div className="contact-info-value">
-                <a href="https://gfsa-do.org" target="_blank" rel="noreferrer">
-                  gfsa-do.org
-                </a>
+                <a href="https://gfsa-do.org" target="_blank" rel="noreferrer">gfsa-do.org</a>
               </div>
             </div>
           </div>

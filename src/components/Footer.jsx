@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useLang } from "../context/LangContext";
 import content from "../lang/content";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -5,20 +6,16 @@ import { faLocationDot, faPhone, faGlobe, faChevronRight } from "@fortawesome/fr
 import "../styles/Footer.css";
 
 const navItems = [
-  { id: "home",     label: content.nav.home },
-  { id: "about",    label: content.nav.about },
-  { id: "services", label: content.nav.services },
-  { id: "news",     label: content.nav.news },
-  { id: "contact",  label: content.nav.contact },
+  { path: "/",         label: content.nav.home },
+  { path: "/about",    label: content.nav.about },
+  { path: "/services", label: content.nav.services },
+  { path: "/news",     label: content.nav.news },
+  { path: "/contact",  label: content.nav.contact },
 ];
 
 export default function Footer() {
   const { t } = useLang();
   const c = content.footer;
-
-  const scrollTo = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <footer className="footer">
@@ -35,12 +32,12 @@ export default function Footer() {
         <div>
           <div className="footer-col-title">Navigation</div>
           <ul className="footer-links">
-            {navItems.map(({ id, label }) => (
-              <li key={id}>
-                <a href={`#${id}`} onClick={(e) => { e.preventDefault(); scrollTo(id); }}>
+            {navItems.map(({ path, label }) => (
+              <li key={path}>
+                <Link to={path}>
                   <FontAwesomeIcon icon={faChevronRight} style={{ fontSize: 11 }} />
                   {t(label)}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

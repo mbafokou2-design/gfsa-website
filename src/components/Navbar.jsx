@@ -1,63 +1,47 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { useLang } from "../context/LangContext";
 import content from "../lang/content";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-import heroImage from "../assets/hero.png";
+import logoImg from "../assets/hero.png";
 import "../styles/Navbar.css";
 
 const navItems = [
-  { id: "home",     label: content.nav.home },
-  { id: "about",    label: content.nav.about },
-  { id: "services", label: content.nav.services },
-  { id: "news",     label: content.nav.news },
-  { id: "contact",  label: content.nav.contact },
+  { path: "/",         label: content.nav.home },
+  { path: "/about",    label: content.nav.about },
+  { path: "/services", label: content.nav.services },
+  { path: "/news",     label: content.nav.news },
+  { path: "/contact",  label: content.nav.contact },
 ];
 
 export default function Navbar() {
   const { lang, toggle, t } = useLang();
-  const [active, setActive] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach((e) => { if (e.isIntersecting) setActive(e.target.id); }),
-      { threshold: 0.4 }
-    );
-    navItems.forEach(({ id }) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-    return () => observer.disconnect();
-  }, []);
-
-  const scrollTo = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-    setMenuOpen(false);
-  };
+  const location = useLocation();
 
   return (
     <nav className="navbar">
-      <a className="navbar-brand" href="#home" onClick={(e) => { e.preventDefault(); scrollTo("home"); }}>
+      <Link className="navbar-brand" to="/" onClick={() => setMenuOpen(false)}>
         <div className="logo-slot">
-          <img src={heroImage} alt="GFSA Logo" className="logo-img" />
+          <img src={logoImg} alt="GFSA Logo" className="logo-img" />
         </div>
         <div className="brand-name">
           GFSA-DO.
           <span>e.V. · Dortmund</span>
         </div>
-      </a>
+      </Link>
 
       <ul className={`nav-links${menuOpen ? " open" : ""}`}>
-        {navItems.map(({ id, label }) => (
-          <li key={id}>
-            <a
-              href={`#${id}`}
-              className={active === id ? "active" : ""}
-              onClick={(e) => { e.preventDefault(); scrollTo(id); }}
+        {navItems.map(({ path, label }) => (
+          <li key={path}>
+            <Link
+              to={path}
+              className={location.pathname === path ? "active" : ""}
+              onClick={() => setMenuOpen(false)}
             >
               {t(label)}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
@@ -68,7 +52,7 @@ export default function Navbar() {
           <button className={`lang-btn${lang === "en" ? " active" : ""}`} onClick={() => lang !== "en" && toggle()}>EN</button>
         </div>
         <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
-          <FontAwesomeIcon icon={menuOpen ? faXmark : faBars} style={{ color: "white", fontSize: 20 }} />
+          <FontAwesomeIcon icon={menuOpen ? faXmark : faBars} style={{ color: "var(--green)", fontSize: 20 }} />
         </button>
       </div>
     </nav>

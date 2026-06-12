@@ -3,6 +3,10 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
+  --red:       #8B1A1A;
+  --red-lt:    #B22222;
+  --green:     #1A5C2A;
+  --green-lt:  #2E7D42;
   --gold:      #C49A3C;
   --gold-lt:   #E8C870;
   --navy:      #1B3557;
@@ -30,6 +34,56 @@ body {
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 32px;
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(26px, 4vw, 40px);
+  color: var(--navy);
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+
+.section-subtitle {
+  font-size: 17px;
+  color: var(--muted);
+  max-width: 580px;
+  margin-bottom: 50px;
+  font-weight: 300;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--green);
+  color: var(--white);
+  font-weight: 700;
+  font-family: 'Lato', sans-serif;
+  padding: 14px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.25s;
+  box-shadow: 0 4px 16px rgba(26,92,42,0.30);
+}
+
+.btn-primary:hover {
+  background: var(--green-lt);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(26,92,42,0.40);
 }
 
 @media (max-width: 768px) {

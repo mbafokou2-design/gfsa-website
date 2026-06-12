@@ -9,7 +9,7 @@ export default function News() {
   const c = content.news;
 
   return (
-    <section id="news" className="news">
+    <section className="news">
       <div className="container">
         <span className="section-tag">{t(c.tag)}</span>
         <h2 className="section-title">{t(c.title)}</h2>
@@ -18,7 +18,7 @@ export default function News() {
           {c.list.map((item, i) => (
             <div className="news-card" key={i}>
               <div className="news-img-slot">
-                {/* Replace with: <img src="/news-{i+1}.jpg" alt="" style={{width:"100%",height:"100%",objectFit:"cover"}} /> */}
+                {/* Replace with: <img src={newsImg} alt="" style={{width:"100%",height:"100%",objectFit:"cover"}} /> */}
                 <FontAwesomeIcon icon={faImage} style={{ fontSize: 32, color: "rgba(196,154,60,0.5)" }} />
                 <span>{t(item.title)}</span>
                 <p>← Insert image here</p>

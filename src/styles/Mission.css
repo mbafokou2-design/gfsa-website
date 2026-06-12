@@ -1,32 +1,6 @@
 .mission {
-  background: var(--cream);
+  background: var(--warm);
   padding: 80px 0;
-}
-
-.section-tag {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: var(--gold);
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-.section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(26px, 4vw, 40px);
-  color: var(--navy);
-  margin-bottom: 16px;
-  line-height: 1.25;
-}
-
-.section-subtitle {
-  font-size: 17px;
-  color: var(--muted);
-  max-width: 580px;
-  margin-bottom: 50px;
-  font-weight: 300;
 }
 
 .mission-grid {
@@ -44,28 +18,34 @@
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.mission-card:nth-child(1) { border-top-color: var(--red); }
+.mission-card:nth-child(2) { border-top-color: var(--green); }
+.mission-card:nth-child(3) { border-top-color: var(--gold); }
+
 .mission-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 32px rgba(27,53,87,0.14);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
 }
 
 .mission-card-icon {
   width: 50px;
   height: 50px;
-  background: rgba(196,154,60,0.12);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--gold);
   font-size: 20px;
   margin-bottom: 18px;
 }
 
+.mission-card:nth-child(1) .mission-card-icon { background: rgba(139,26,26,0.08); color: var(--red); }
+.mission-card:nth-child(2) .mission-card-icon { background: rgba(26,92,42,0.08); color: var(--green); }
+.mission-card:nth-child(3) .mission-card-icon { background: rgba(196,154,60,0.12); color: var(--gold); }
+
 .mission-card-title {
   font-family: 'Playfair Display', serif;
   font-size: 20px;
-  color: var(--navy);
+  color: var(--text);
   margin-bottom: 10px;
 }
 

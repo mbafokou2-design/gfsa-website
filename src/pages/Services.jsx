@@ -11,7 +11,7 @@ export default function Services() {
   const c = content.services;
 
   return (
-    <section id="services" className="services">
+    <section className="services">
       <div className="container">
         <span className="section-tag">{t(c.tag)}</span>
         <h2 className="section-title">{t(c.title)}</h2>

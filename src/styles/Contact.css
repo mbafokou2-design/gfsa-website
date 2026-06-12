@@ -1,5 +1,5 @@
 .contact {
-  background: var(--cream);
+  background: var(--warm);
   padding: 80px 0;
 }
 
@@ -10,17 +10,15 @@
   align-items: start;
 }
 
-.contact-info-block {
-  margin-bottom: 28px;
-}
+.contact-info-block { margin-bottom: 28px; }
 
 .contact-info-label {
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 6px;
+  color: var(--green);
+  margin-bottom: 8px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -28,23 +26,21 @@
 
 .contact-info-value {
   font-size: 16px;
-  color: var(--navy);
+  color: var(--text);
   line-height: 1.7;
 }
 
 .contact-info-value a {
-  color: var(--gold);
+  color: var(--green);
   text-decoration: none;
   font-weight: 700;
 }
 
-.contact-info-value a:hover {
-  color: var(--gold-lt);
-}
+.contact-info-value a:hover { color: var(--green-lt); }
 
 .contact-divider {
   border: none;
-  border-top: 1px solid rgba(196,154,60,0.2);
+  border-top: 1px solid rgba(26,92,42,0.15);
   margin: 22px 0;
 }
 
@@ -53,24 +49,23 @@
   border-radius: var(--radius);
   padding: 36px;
   box-shadow: var(--shadow);
+  border-top: 4px solid var(--red);
 }
 
 .contact-form-title {
   font-family: 'Playfair Display', serif;
-  color: var(--navy);
+  color: var(--text);
   font-size: 22px;
   margin-bottom: 24px;
 }
 
-.form-group {
-  margin-bottom: 20px;
-}
+.form-group { margin-bottom: 20px; }
 
 .form-label {
   display: block;
   font-size: 13px;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--text);
   margin-bottom: 6px;
   letter-spacing: 0.3px;
 }
@@ -79,7 +74,7 @@
 .form-textarea {
   width: 100%;
   padding: 12px 16px;
-  border: 1.5px solid rgba(196,154,60,0.3);
+  border: 1.5px solid rgba(26,92,42,0.25);
   border-radius: 8px;
   background: var(--white);
   color: var(--text);
@@ -90,9 +85,7 @@
 }
 
 .form-input:focus,
-.form-textarea:focus {
-  border-color: var(--gold);
-}
+.form-textarea:focus { border-color: var(--green); }
 
 .form-textarea {
   resize: vertical;
@@ -105,8 +98,8 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: var(--gold);
-  color: var(--navy);
+  background: var(--red);
+  color: var(--white);
   font-weight: 700;
   font-family: 'Lato', sans-serif;
   padding: 14px 32px;
@@ -115,13 +108,12 @@
   cursor: pointer;
   font-size: 15px;
   transition: all 0.25s;
-  box-shadow: 0 4px 16px rgba(196,154,60,0.35);
+  box-shadow: 0 4px 16px rgba(139,26,26,0.25);
 }
 
 .btn-submit:hover {
-  background: var(--gold-lt);
+  background: var(--red-lt);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(196,154,60,0.45);
 }
 
 @media (max-width: 768px) {
