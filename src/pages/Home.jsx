@@ -2,10 +2,11 @@ import { useNavigate } from "react-router-dom";
 import { useLang } from "../context/LangContext";
 import content from "../lang/content";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faImage, faFemale, faHandshake, faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faImage, faFemale, faHandshake, faGlobe, faClock } from "@fortawesome/free-solid-svg-icons";
 import heroImg from "../assets/hero.png";
 import "../styles/Hero.css";
 import "../styles/Mission.css";
+import "../styles/News.css";
 
 const missionIcons = [faFemale, faHandshake, faGlobe];
 
@@ -14,6 +15,7 @@ export default function Home() {
   const navigate = useNavigate();
   const h = content.hero;
   const m = content.mission;
+  const n = content.news;
 
   const missionCards = [
     { title: m.c1Title, text: m.c1Text },
@@ -65,6 +67,39 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── NEWS ── */}
+      <section className="news">
+        <div className="container">
+          <span className="section-tag">{t(n.tag)}</span>
+          <h2 className="section-title">{t(n.title)}</h2>
+          <p className="section-subtitle">{t(n.subtitle)}</p>
+          <div className="news-grid">
+            {n.list.slice(0, 3).map((item, i) => (
+              <div className="news-card" key={i}>
+                <div className="news-img-slot">
+                  <FontAwesomeIcon icon={faImage} style={{ fontSize: 32, color: "rgba(196,154,60,0.5)" }} />
+                  <span>{t(item.title)}</span>
+                  <p>← Insert image here</p>
+                </div>
+                <div className="news-body">
+                  <span className="news-tag">{t(item.tag)}</span>
+                  <div className="news-title">{t(item.title)}</div>
+                  <div className="news-text">{t(item.text)}</div>
+                  <div className="news-badge">
+                    <FontAwesomeIcon icon={faClock} />
+                    {t(n.comingSoon)}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <button className="btn-primary" style={{marginTop: "40px"}} onClick={() => navigate("/news")}>
+            View All News
+            <FontAwesomeIcon icon={faArrowRight} />
+          </button>
         </div>
       </section>
     </>
