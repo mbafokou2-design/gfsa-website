@@ -40,9 +40,10 @@ export default function Home() {
                 <FontAwesomeIcon icon={faArrowRight} />
                 {t(h.eyebrow)}
               </div>
-              <h1 className="hero-title">
-                Gambians <em>Family Sisters</em> Association e. V.
-              </h1>
+<h1 className="hero-title">
+  Gambians <em>Family Sisters</em>{" "}
+  <span style={{ whiteSpace: "nowrap" }}>Association e. V.</span>
+</h1>
               <p className="hero-subtitle">{t(h.subtitle)}</p>
               <button className="btn-primary" onClick={() => navigate("/about")}>
                 {t(h.cta)}
@@ -51,7 +52,7 @@ export default function Home() {
             </div>
 
             <div className="hero-img-slot">
-              <img src={heroImg} alt="GFSA Team" style={{width:"100%",height:"100%",objectFit:"cover",borderRadius:"12px"}} />
+              <img src={heroImg} alt="GFSA Team" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px" }} />
             </div>
           </div>
         </div>
@@ -77,31 +78,31 @@ export default function Home() {
       </section>
 
       {/* ── NEWS ── */}
-    <section className="news">
-      <div className="container">
-        <span className="section-tag">{t(c.tag)}</span>
-        <h2 className="section-title">{t(c.title)}</h2>
-        <p className="section-subtitle">{t(c.subtitle)}</p>
-        <div className="news-grid">
-          {c.list.map((item, i) => (
-            <div className="news-card" key={i}>
-              <div className="news-img-slot">
-                <img src={images[i]} alt="" style={{width:"100%",height:"100%",objectFit:"cover"}} />
-              </div>
-              <div className="news-body">
-                <span className="news-tag">{t(item.tag)}</span>
-                <div className="news-title">{t(item.title)}</div>
-                <div className="news-text">{t(item.text)}</div>
-                <div className="news-badge">
-                  <FontAwesomeIcon icon={faClock} />
-                  {t(c.comingSoon)}
+      <section className="news">
+        <div className="container">
+          <span className="section-tag">{t(c.tag)}</span>
+          <h2 className="section-title">{t(c.title)}</h2>
+          <p className="section-subtitle">{t(c.subtitle)}</p>
+          <div className="news-grid">
+            {c.list.map((item, i) => (
+              <div className="news-card" key={i}>
+                <div className="news-img-slot">
+                  <img src={images[i]} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                </div>
+                <div className="news-body">
+                  <span className="news-tag">{t(item.tag)}</span>
+                  <div className="news-title">{t(item.title)}</div>
+                  <div className="news-text">{t(item.text)}</div>
+                  <div className="news-badge">
+                    <FontAwesomeIcon icon={faClock} />
+                    {t(c.comingSoon)}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </>
   );
 }

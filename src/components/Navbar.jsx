@@ -27,8 +27,8 @@ export default function Navbar() {
           <img src={logoImg} alt="GFSA Logo" className="logo-img" />
         </div>
         <div className="brand-name">
-          GFSA-DO.
-          <span>e. V. · Dortmund</span>
+          GFSA-DO.e. V.
+          <span> Dortmund</span>
         </div>
       </Link>
 

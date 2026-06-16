@@ -7,14 +7,14 @@ import KaddySannehImg from "../assets/Kaddy Sanneh.jpg";
 import NyimaSanyangImg from "../assets/Nyima Sanyang.jpg";
 import LalaSillahImg from "../assets/Lala Sillah.jpg";
 import FatouJadamaImg from "../assets/Fatou Jadama.png";
-import Img1 from "../assets/img.png";
+import Img1 from "../assets/group.jpg";
 import "../styles/About.css";
 
 const profileImages = {
-  "Kaddy Sanneh":  KaddySannehImg,
+  "Kaddy Sanneh": KaddySannehImg,
   "Nyima Sanyang": NyimaSanyangImg,
-  "Lala Sillah":   LalaSillahImg,
-  "Fatou Jadama":  FatouJadamaImg,
+  "Lala Sillah": LalaSillahImg,
+  "Fatou Jadama": FatouJadamaImg,
 };
 
 export default function About() {
@@ -35,7 +35,7 @@ export default function About() {
           </div>
 
           <div className="about-img-slot">
-            <img src={heroImg} alt="Our Team" style={{width:"100%",height:"100%",objectFit:"cover",borderRadius:"12px"}} />
+            <img src={heroImg} alt="Our Team" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "12px" }} />
           </div>
         </div>
 
@@ -70,6 +70,10 @@ export default function About() {
               </div>
             ))}
           </div>
+        </div>
+        {/* Group Photo Banner */}
+        <div className="group-banner">
+          <img src={Img1} alt="GFSA Group" className="group-banner-img" />
         </div>
 
       </div>
