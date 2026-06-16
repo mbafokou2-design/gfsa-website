@@ -52,7 +52,7 @@ export default function Footer() {
           <div className="footer-col-title">Kontakt / Contact</div>
           <div className="footer-contact-item">
             <FontAwesomeIcon icon={faLocationDot} className="footer-contact-icon" />
-            <span>C/O Kaddy Sanneh Tiefe Straße 38, 44143 Dortmund, Deutschland</span>
+            <span>C/O Kaddy Sanneh<br />Tiefe Straße 38, 44143 Dortmund, Deutschland</span>
             
           </div>
           <div className="footer-contact-item">
