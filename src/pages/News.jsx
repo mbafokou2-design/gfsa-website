@@ -3,10 +3,13 @@ import content from "../lang/content";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage, faClock } from "@fortawesome/free-solid-svg-icons";
 import "../styles/News.css";
+import newsImg1 from '../assets/news.jpg'
+import newsImg2 from '../assets/news1.jpg'
 
 export default function News() {
   const { t } = useLang();
   const c = content.news;
+  const images = [newsImg1, newsImg2];
 
   return (
     <section className="news">
@@ -18,10 +21,7 @@ export default function News() {
           {c.list.map((item, i) => (
             <div className="news-card" key={i}>
               <div className="news-img-slot">
-                {/* Replace with: <img src={newsImg} alt="" style={{width:"100%",height:"100%",objectFit:"cover"}} /> */}
-                <FontAwesomeIcon icon={faImage} style={{ fontSize: 32, color: "rgba(196,154,60,0.5)" }} />
-                <span>{t(item.title)}</span>
-                <p>← Insert image here</p>
+                <img src={images[i]} alt="" style={{width:"100%",height:"100%",objectFit:"cover"}} />
               </div>
               <div className="news-body">
                 <span className="news-tag">{t(item.tag)}</span>

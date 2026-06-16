@@ -26,7 +26,7 @@
 .news-img-slot {
   height: 200px;
   background: var(--warm);
-  border-bottom: 2px dashed rgba(196,154,60,0.35);
+
   display: flex;
   flex-direction: column;
   align-items: center;

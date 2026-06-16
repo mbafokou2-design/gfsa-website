@@ -35,7 +35,7 @@ export default function About() {
           </div>
 
           <div className="about-img-slot">
-            <img src={Img1} alt="Our Team" style={{width:"100%",height:"100%",objectFit:"cover",borderRadius:"12px"}} />
+            <img src={heroImg} alt="Our Team" style={{width:"100%",height:"100%",objectFit:"cover",borderRadius:"12px"}} />
           </div>
         </div>
 
