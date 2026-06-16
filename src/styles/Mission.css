@@ -21,6 +21,7 @@
 .mission-card:nth-child(1) { border-top-color: var(--red); }
 .mission-card:nth-child(2) { border-top-color: var(--green); }
 .mission-card:nth-child(3) { border-top-color: var(--gold); }
+.mission-card:nth-child(4) { border-top-color: var(--navy); }
 
 .mission-card:hover {
   transform: translateY(-4px);
@@ -41,6 +42,7 @@
 .mission-card:nth-child(1) .mission-card-icon { background: rgba(139,26,26,0.08); color: var(--red); }
 .mission-card:nth-child(2) .mission-card-icon { background: rgba(26,92,42,0.08); color: var(--green); }
 .mission-card:nth-child(3) .mission-card-icon { background: rgba(196,154,60,0.12); color: var(--gold); }
+.mission-card:nth-child(4) .mission-card-icon { background: rgba(196,154,60,0.12); color: var(--navy); }
 
 .mission-card-title {
   font-family: 'Playfair Display', serif;
@@ -59,3 +61,4 @@
   .mission { padding: 60px 0; }
   .mission-grid { grid-template-columns: 1fr; }
 }
+

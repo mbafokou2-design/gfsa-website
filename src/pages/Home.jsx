@@ -2,13 +2,13 @@ import { useNavigate } from "react-router-dom";
 import { useLang } from "../context/LangContext";
 import content from "../lang/content";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faImage, faFemale, faHandshake, faGlobe, faClock } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faImage, faFemale, faHandshake, faGlobe, faClock, faChildren } from "@fortawesome/free-solid-svg-icons";
 import heroImg from "../assets/hero.png";
 import "../styles/Hero.css";
 import "../styles/Mission.css";
 import "../styles/News.css";
 
-const missionIcons = [faFemale, faHandshake, faGlobe];
+const missionIcons = [faFemale, faHandshake, faGlobe, faChildren];
 
 export default function Home() {
   const { t } = useLang();
@@ -21,6 +21,7 @@ export default function Home() {
     { title: m.c1Title, text: m.c1Text },
     { title: m.c2Title, text: m.c2Text },
     { title: m.c3Title, text: m.c3Text },
+    { title: m.c4Title, text: m.c4Text },
   ];
 
   return (
@@ -35,7 +36,7 @@ export default function Home() {
                 {t(h.eyebrow)}
               </div>
               <h1 className="hero-title">
-                Gambians <em>Family Sisters</em> Association
+                Gambians <em>Family Sisters</em> Association e. V.
               </h1>
               <p className="hero-subtitle">{t(h.subtitle)}</p>
               <button className="btn-primary" onClick={() => navigate("/about")}>

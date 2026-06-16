@@ -7,6 +7,7 @@ import KaddySannehImg from "../assets/Kaddy Sanneh.jpg";
 import NyimaSanyangImg from "../assets/Nyima Sanyang.jpg";
 import LalaSillahImg from "../assets/Lala Sillah.jpg";
 import FatouJadamaImg from "../assets/Fatou Jadama.png";
+import Img1 from "../assets/img.png";
 import "../styles/About.css";
 
 const profileImages = {
@@ -34,7 +35,7 @@ export default function About() {
           </div>
 
           <div className="about-img-slot">
-            <img src={heroImg} alt="Our Team" style={{width:"100%",height:"100%",objectFit:"cover",borderRadius:"12px"}} />
+            <img src={Img1} alt="Our Team" style={{width:"100%",height:"100%",objectFit:"cover",borderRadius:"12px"}} />
           </div>
         </div>
 

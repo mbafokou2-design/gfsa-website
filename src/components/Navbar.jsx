@@ -28,7 +28,7 @@ export default function Navbar() {
         </div>
         <div className="brand-name">
           GFSA-DO.
-          <span>e.V. · Dortmund</span>
+          <span>e. V. · Dortmund</span>
         </div>
       </Link>
 
