@@ -83,3 +83,27 @@
   .news { padding: 60px 0; }
   .news-grid { grid-template-columns: 1fr; }
 }
+
+.news-youtube-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  color: var(--white);
+  background: #FF0000;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.news-youtube-link:hover {
+  background: #cc0000;
+  transform: translateY(-2px);
+}
+
+.news-youtube-link svg {
+  font-size: 16px;
+}

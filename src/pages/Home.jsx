@@ -2,7 +2,8 @@ import { useNavigate } from "react-router-dom";
 import { useLang } from "../context/LangContext";
 import content from "../lang/content";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faImage, faFemale, faHandshake, faGlobe, faClock, faChildren } from "@fortawesome/free-solid-svg-icons";
+import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faArrowRight,  faFemale, faHandshake, faGlobe,  faChildren ,faImage, faClock, faPlay   } from "@fortawesome/free-solid-svg-icons";
 import heroImg from "../assets/hero.png";
 import "../styles/Hero.css";
 import "../styles/Mission.css";
@@ -40,10 +41,10 @@ export default function Home() {
                 <FontAwesomeIcon icon={faArrowRight} />
                 {t(h.eyebrow)}
               </div>
-<h1 className="hero-title">
-  Gambians <em>Family Sisters</em>{" "}
-  <span style={{ whiteSpace: "nowrap" }}>Association e. V.</span>
-</h1>
+              <h1 className="hero-title">
+                Gambians <em>Family Sisters</em>{" "}
+                <span style={{ whiteSpace: "nowrap" }}>Association e. V.</span>
+              </h1>
               <p className="hero-subtitle">{t(h.subtitle)}</p>
               <button className="btn-primary" onClick={() => navigate("/about")}>
                 {t(h.cta)}
@@ -78,31 +79,38 @@ export default function Home() {
       </section>
 
       {/* ── NEWS ── */}
-      <section className="news">
-        <div className="container">
-          <span className="section-tag">{t(c.tag)}</span>
-          <h2 className="section-title">{t(c.title)}</h2>
-          <p className="section-subtitle">{t(c.subtitle)}</p>
-          <div className="news-grid">
-            {c.list.map((item, i) => (
-              <div className="news-card" key={i}>
-                <div className="news-img-slot">
-                  <img src={images[i]} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-                </div>
-                <div className="news-body">
-                  <span className="news-tag">{t(item.tag)}</span>
-                  <div className="news-title">{t(item.title)}</div>
-                  <div className="news-text">{t(item.text)}</div>
-                  <div className="news-badge">
-                    <FontAwesomeIcon icon={faClock} />
-                    {t(c.comingSoon)}
-                  </div>
-                </div>
+    <section className="news">
+      <div className="container">
+        <span className="section-tag">{t(c.tag)}</span>
+        <h2 className="section-title">{t(c.title)}</h2>
+        <p className="section-subtitle">{t(c.subtitle)}</p>
+        <div className="news-grid">
+          {c.list.map((item, i) => (
+            <div className="news-card" key={i}>
+              <div className="news-img-slot">
+                <img src={images[i]} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
               </div>
-            ))}
-          </div>
+              <div className="news-body">
+                <span className="news-tag">{t(item.tag)}</span>
+                <div className="news-title">{t(item.title)}</div>
+                <div className="news-text">{t(item.text)}</div>
+                {item.youtube && (
+                  <a
+                    href={item.youtube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="news-youtube-link"
+                  >
+                    <FontAwesomeIcon icon={faYoutube} />
+                    {t(c.youtubeLabel)}
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
+    </section>
     </>
   );
 }

@@ -1,7 +1,7 @@
 import { useLang } from "../context/LangContext";
 import content from "../lang/content";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot, faPhone, faGlobe, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot, faPhone, faGlobe, faEnvelope, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import "../styles/Contact.css";
 
 export default function Contact() {
@@ -31,7 +31,7 @@ export default function Contact() {
                 44143 Dortmund, Deutschland
               </div>
             </div>
-db
+            db
             <hr className="contact-divider" />
 
             <div className="contact-info-block">
@@ -48,13 +48,14 @@ db
 
             <div className="contact-info-block">
               <div className="contact-info-label">
-                <FontAwesomeIcon icon={faGlobe} />
+                <FontAwesomeIcon icon={faEnvelope} />
                 {t(c.webTitle)}
               </div>
               <div className="contact-info-value">
-                <a href="https://gfsa-do.org" target="_blank" rel="noreferrer">gfsa-do.org</a>
+                <a href="mailto:info@gfsa-do.org" target="_blank" rel="noreferrer">info@gfsa-do.org</a>
               </div>
             </div>
+
           </div>
 
           <div className="contact-form">
