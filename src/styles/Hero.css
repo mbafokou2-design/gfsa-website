@@ -17,7 +17,7 @@
 
 .hero-inner {
   display: grid;
-  grid-template-columns: 55fr 45fr;
+  grid-template-columns: 55fr 40fr;
   gap: 48px;
   align-items: center;
   position: relative;

@@ -25,7 +25,7 @@ export default function Contact() {
               </div>
               <div className="contact-info-value">
                 Gambians Family Sisters Association<br />
-                in Dortmund (GFSA-DO.) e.V.<br />
+                in Dortmund (GFSA-DO.) e. V.<br />
                 C/O Kaddy Sanneh<br />
                 Tiefe Straße 38<br />
                 44143 Dortmund, Deutschland

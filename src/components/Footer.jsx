@@ -27,7 +27,7 @@ export default function Footer() {
       <div className="footer-inner">
 
         <div>
-          <div className="footer-brand-name">GFSA-DO .e. V.</div>
+          <div className="footer-brand-name">GFSA-DO. e. V.</div>
           <div className="footer-brand-sub">  Dortmund</div>
           <p className="footer-brand-desc">
             Gambians Family Sisters Association in Dortmund e. V.
