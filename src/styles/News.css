@@ -107,3 +107,24 @@
 .news-youtube-link svg {
   font-size: 16px;
 }
+.news-video-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  color: var(--white);
+  background: var(--green);
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  font-family: 'Lato', sans-serif;
+}
+
+.news-video-btn:hover {
+  background: var(--green-lt);
+  transform: translateY(-2px);
+}
