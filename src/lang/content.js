@@ -1,3 +1,5 @@
+import { faClock } from "@fortawesome/free-solid-svg-icons";
+
 const content = {
   nav: {
     home:     { de: "Startseite",       en: "Home" },
@@ -68,12 +70,12 @@ const content = {
     tag:        { de: "Aktuelles",   en: "News" },
     title:      { de: "Aktuelles",   en: "Latest News" },
     subtitle:   { de: "Unsere neuesten Projekte und Veranstaltungen.", en: "Our latest projects and events." },
-      youtubeLabel: {
+    youtubeLabel: {
     de: "Auf YouTube ansehen",
     en: "Watch on YouTube"
   },
     list: [
-      { tag: { de: "Veranstaltung", en: "Event" },  title: { de: "Sommer BBQ 2026",     en: "Summer BBQ 2026" },     text: { de: "Ein fröhliches Gemeinschaftsevent für alle Mitglieder und Freunde der GFSA-DO e.V.", en: "A joyful community event for all members and friends of GFSA-DO e.V." } },
+      { tag: { de: "Veranstaltung", en: "Event" },  title: { de: "Sommer BBQ 2026",     en: "Summer BBQ 2026" }, comingSoon: { de: "Demnächst",   en: "Coming Soon" }, paragraph: {faClock},    text: { de: "Ein fröhliches Gemeinschaftsevent für alle Mitglieder und Freunde der GFSA-DO e.V.", en: "A joyful community event for all members and friends of GFSA-DO e.V." } },
       { tag: { de: "Projekt",       en: "Project" }, youtube:"https://youtu.be/YXlNWDaZ1Pw?si=Rq2tNE6bw3rgATyi", title: { de: "Sisters Connect 2026", en: "Sisters Connect 2026" }, text: { de: "Ein Netzwerktreffen für Frauen – Raum für Austausch, Inspiration und gegenseitige Unterstützung.", en: "A networking gathering for women – a space for exchange, inspiration and mutual support." } },
     ],
   },

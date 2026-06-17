@@ -28,6 +28,9 @@ export default function News() {
                 <span className="news-tag">{t(item.tag)}</span>
                 <div className="news-title">{t(item.title)}</div>
                 <div className="news-text">{t(item.text)}</div>
+                <div className="news-badge">
+                  {t(item.comingSoon)}
+                </div>
                 {item.youtube && (
                   <a
                     href={item.youtube}
